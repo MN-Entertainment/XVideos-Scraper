@@ -26,7 +26,7 @@ module.exports.searchVideo = async (val)=>{
    let url = `http://www.xvideos2.com/?${query}`
    var {data} = await axios(url)
    $ = cheerio.load(data)
-   let videosContainer = $("div[id='content'] div[class='mozaique cust-nb-cols'] div[class='thumb-block  ']");
+   let videosContainer = $("div[id='content'] div[class='mozaique cust-nb-cols'] div[class='frame-block thumb-block  ']");
    let arr = [];
    videosContainer.each((idx, el) => {
     let obj = {};
